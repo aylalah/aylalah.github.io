@@ -19,6 +19,7 @@ var correct3 = new Audio("sound/correct3.mp3");
 var timeover = new Audio("sound/timeover.mp3");
 var secsHand = 0 , score = 0 ;
 	var selectedInterestArray = [];
+var family = ["Lala","Amos","Gbenga","Testimony","Ireoluwa","Jomiloju","Adewura","Mayowa","Adelayo","Odunola","Ayoade"] ;
 var soccer = ["soccer","goal","kick","referee","penalty","offside","cornerkick","football","foul","dribble","freekick"] ;
 	var nof , tid , originalword , control ;
 var politics = ["candidate","vote","senate","party","ballot box","manifesto","campaign","election","voters card","honorable","position","form"];
@@ -249,6 +250,10 @@ var medicine = ["abdominal", "abdominoplasty", "stomach", "abdominocentesis", "a
 			{
 				selectedInterestArray = soccer;
 			}
+		if(selectedOption == 'family')
+			{
+				selectedInterestArray = family;
+			}
 		else if(selectedOption == 'politics')
 			{
 				selectedInterestArray = politics;
@@ -329,7 +334,7 @@ var medicine = ["abdominal", "abdominoplasty", "stomach", "abdominocentesis", "a
 <!--						<input type="button" id="control" class="btn btn-primary" value="START" onclick="begin()" name="">-->
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" name="" id="oword" placeholder="shuffled word here">
+						<input type="text" class="form-control" name="" disabled id="oword" placeholder="shuffled word here">
 					</div>
 					<div class="form-group">
 						<input type="text" class="form-control" name="" id="sword" placeholder="answer here">
@@ -364,7 +369,8 @@ var medicine = ["abdominal", "abdominoplasty", "stomach", "abdominocentesis", "a
 	<div class="col-md-6" id="col">
 		<br><br><br>
 		Select an area of interest: 
-		<input type="radio" name="interest" value="soccer" id="interest" checked  />Soccer 
+		<input type="radio" name="interest" value="family" id="interest" checked  />Family
+		<input type="radio" name="interest" value="soccer" id="interest" />Soccer 
 		<input type="radio" name="interest" id="interest" value="politics">Politics 
 
 		<input type="radio" name="interest" value="education" />Education 
